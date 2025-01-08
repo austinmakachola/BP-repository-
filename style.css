@@ -1,0 +1,380 @@
+/* Root Variables */
+:root {
+  --primary-bg: #ffffff;
+  --highlight-color: #007bff;
+  --hover-accent-color: #0056b3;
+  --text-color: #333333;
+  --secondary-bg: #f9f9f9;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-intense: rgba(0, 0, 0, 0.2);
+  --transition-speed: 0.3s;
+}
+
+
+
+
+
+
+
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--primary-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight-color);
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--hover-accent-color);
+}
+
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Header Styles */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--primary-bg);
+  box-shadow: 0 2px 5px var(--box-shadow-color);
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px var(--shadow-intense);
+}
+
+/* Navigation Bar */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+}
+
+.logo a {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  color: var(--text-color);
+  transition: color var(--transition-speed);
+}
+
+.nav-links li a:hover {
+  color: var(--hover-accent-color);
+}
+
+.nav-links li a.active {
+  color: var(--highlight-color);
+  font-weight: bold;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform var(--transition-speed);
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Newsletter Section */
+#newsletter {
+  background-color: var(--secondary-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--box-shadow-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#newsletter input[type="email"] {
+  padding: 0.8rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--box-shadow-color);
+  border-radius: 4px;
+}
+
+#newsletter button {
+  padding: 0.8rem 1.5rem;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color var(--transition-speed);
+}
+
+#newsletter button:hover {
+  background-color: var(--hover-accent-color);
+}
+
+
+
+
+
+
+
+/* Contact Us Section */
+#contact {
+  background-color: var(--secondary-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--box-shadow-color);
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--highlight-color);
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#contact label {
+  align-self: flex-start;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  padding: 0.8rem;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid var(--box-shadow-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px var(--box-shadow-color);
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+  border-color: var(--highlight-color);
+  box-shadow: 0 2px 5px var(--shadow-intense);
+  outline: none;
+}
+
+#contact textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+#contact button {
+  padding: 0.8rem 1.5rem;
+  background-color: #0865FE;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width:100%;
+  font-weight: bold;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+#contact button:hover {
+  background-color: var(--hover-accent-color);
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+footer {
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer .social-links {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer .social-links a {
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+footer .privacy-links {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+footer .privacy-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer .privacy-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--primary-bg);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px var(--shadow-intense);
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #newsletter form {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+
+
+
+/* General Styles for Policy Pages */
+.policy, .terms {
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.policy h1, .terms h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--highlight-color);
+}
+
+.policy h2, .terms h2 {
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+  color: var(--hover-accent-color);
+}
+
+.policy p, .terms p, .policy ul, .terms ul {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.policy ul, .terms ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.policy a, .terms a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.policy a:hover, .terms a:hover {
+  color: var(--hover-accent-color);
+}
